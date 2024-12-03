@@ -1,12 +1,11 @@
 :root {
-	--main-min-width: 1280px;
-
 	--font-family-base: 'Raleway', sans-serif;
 	--font-family-accent: 'Arial' sans-serif;
 	--main-font-size: 62.5%;
 
-	--container-width: 1060px;
-	--container-padding-x: 1.5rem;
+	--container-width: 1280px;
+	--container-padding-x: 3.2rem;
+	--container-padding-y: 3.2rem;
 
 	--color-white: rgb(245, 244, 244);
 	--main-color: rgba(245, 244, 244, 0.4);

@@ -12,8 +12,8 @@ const widgetLists = document.querySelector('.widget-lists');
 const widgetTemplate = document.querySelector('#widget-list');
 
 const switchTemplate = document.querySelector('#switch-list');
-const switchDayLists = document.querySelector('.switch-day__lists');
-const switchHourLists = document.querySelector('.switch-hour__lists');
+const switchDayLists = document.querySelector('.switch-days');
+const switchHourLists = document.querySelector('.switch-hours');
 
 const sliderMenuButtons = document.querySelectorAll('.menu__button');
 

@@ -3,18 +3,24 @@ html {
 }
 
 body {
-	min-width: 1280px;
 	font-family: var(--font-family-base);
 	font-style: normal;
 	font-weight: 400;
 	font-variant-numeric: lining-nums;
-	background-image: url(./../public/images/bg/weather.jpeg);
+	background-image: url(/public/images/bg/weather.jpeg);
 	background-color: rgb(168, 163, 163);
-	background-position: center;
+	background-position: 50% 55%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	overflow-x: hidden;
+}
+
+.container {
+	margin-inline: auto;
+	max-width: var(--container-width);
+	padding-block: var(--container-padding-y);
+	padding-inline: var(--container-padding-x);
 }
 
 .visually-hidden {
@@ -33,4 +39,26 @@ body {
 .visibility-hidden {
 	visibility: hidden;
 	opacity: 0;
+}
+
+.disabled {
+	opacity: 0.3;
+}
+
+@media (max-width: 1279px) {
+	.container {
+		padding-inline: 3.2rem;
+	}
+}
+
+@media (max-width: 1023px) {
+	.container {
+		padding-inline: 2.4rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		padding-inline: 1.6rem;
+	}
 }

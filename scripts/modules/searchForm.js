@@ -19,7 +19,6 @@ export function searchForm(form, input, searchIcon, buttonReset) {
 	});
 
 	form.addEventListener('reset', () => {
-		console.log('reset');
 		hideButtonReset();
 		input.focus();
 	});

@@ -7,7 +7,7 @@
 	position: relative;
 	width: 25.3em;
 	height: 2.4em;
-	padding: 1.2rem 1.6rem;
+	padding: 1.2rem 5.6rem 1.2rem 1.6rem;
 	font-size: 2rem;
 	border-radius: var(--border-radius);
 	border: 1px solid transparent;
@@ -51,4 +51,37 @@
 	top: 2px;
 	transform: translateY(11px);
 	transition: opacity 0.2s ease-in;
+}
+
+@media (max-width: 1023px) {
+	.search__input {
+		width: 601px;
+	}
+}
+
+@media (max-width: 885px) {
+	.search__input {
+		width: 483px;
+	}
+}
+
+@media (max-width: 767px) {
+	.search__input {
+		width: 409px;
+		height: 32px;
+		padding: 8px 40px 8px 12px;
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+	.search__icon-loupe {
+		width: 16px;
+		height: 16px;
+		top: -3px;
+	}
+}
+
+@media (max-width: 639px) {
+	.search__input {
+		width: 263px;
+	}
 }

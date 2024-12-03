@@ -1,11 +1,21 @@
+.weather-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 408px;
+	column-gap: 16px;
+	padding: 3.2rem;
+}
+
 .weather-conditions {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	row-gap: 63px;
-	width: 53.4em;
+	justify-content: space-between;
+	width: 534px;
+	height: 408px;
 	padding: 0.8rem;
 	text-align: center;
+	font-size: 2rem;
 	line-height: 1.2;
 }
 
@@ -13,11 +23,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 2rem;
 }
 
 .detail__location {
-	margin-bottom: 0.8rem;
+	margin-bottom: 0.9rem;
 	font-size: 2.4rem;
 	line-height: 1.3;
 	font-weight: 700;
@@ -29,13 +38,12 @@
 
 .degrees {
 	font-size: 11.2rem;
-	line-height: 112px;
+	line-height: 1;
 	font-weight: 700;
 }
 
 .forecast {
 	position: relative;
-	font-size: 2rem;
 }
 
 .forecast__title {
@@ -43,7 +51,6 @@
 	display: inline-block;
 	margin-bottom: 0.8rem;
 	padding-left: 3.1rem;
-	font-size: 2rem;
 	font-weight: 400;
 	text-align: center;
 }
@@ -56,4 +63,60 @@
 	height: 24px;
 	background: url('./../../public/images/icons/weather/day/broken-clouds.svg')
 		no-repeat center/cover;
+}
+
+@media (max-width: 1023px) {
+	.weather-wrap {
+		flex-direction: column;
+		row-gap: 48px;
+		padding: 2.4rem;
+	}
+	.weather-conditions {
+		padding: 0;
+		height: 306px;
+	}
+	.detail__location {
+		margin-bottom: 0.7rem;
+	}
+	.detail__week {
+		margin-bottom: 0.7rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.weather-conditions {
+		padding: 0;
+		height: 184px;
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+	.weather-wrap {
+		row-gap: 32px;
+		padding: 1.6rem;
+	}
+	.detail__location {
+		margin-bottom: 0.2rem;
+		font-size: 1.6rem;
+		line-height: 1.3;
+	}
+	.detail__week {
+		margin-bottom: 0.2rem;
+	}
+	.degrees {
+		font-size: 5.6rem;
+	}
+	.forecast__title {
+		padding-left: 2.1rem;
+		margin-bottom: 0.2rem;
+	}
+	.forecast__title::before {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+@media (max-width: 639px) {
+	.weather-conditions {
+		width: 311px;
+	}
 }

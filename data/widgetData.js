@@ -1,7 +1,7 @@
 export const widgetData = [
 	{
 		title: 'Влажность',
-		src: '../public/images/icons/widget/humidity.svg',
+		src: './public/images/icons/widget/humidity.svg',
 		value: '75 %',
 		bar: {
 			isProgressBar: true,
@@ -10,7 +10,7 @@ export const widgetData = [
 	},
 	{
 		title: 'Давление',
-		src: '../public/images/icons/widget/barometer.svg',
+		src: './public/images/icons/widget/barometer.svg',
 		value: '761',
 		bar: {
 			barTitle: 'Повышенное',
@@ -20,7 +20,7 @@ export const widgetData = [
 	},
 	{
 		title: 'Видимость',
-		src: '../public/images/icons/widget/visibility.svg',
+		src: './public/images/icons/widget/visibility.svg',
 		value: '28 км',
 		bar: {
 			barTitle: 'Нормальная',
@@ -30,7 +30,7 @@ export const widgetData = [
 	},
 	{
 		title: 'Рассвет',
-		src: '../public/images/icons/widget/sunrise.svg',
+		src: './public/images/icons/widget/sunrise.svg',
 		value: '8:42',
 		bar: {
 			barTitle: 'Прошло: 02:47',
@@ -39,7 +39,7 @@ export const widgetData = [
 	},
 	{
 		title: 'Закат',
-		src: '../public/images/icons/widget/sunset.svg',
+		src: './public/images/icons/widget/sunset.svg',
 		value: '16:37',
 		bar: {
 			barTitle: 'Осталось: 05:08',
@@ -48,7 +48,7 @@ export const widgetData = [
 	},
 	{
 		title: 'Сила ветра',
-		src: '../public/images/icons/widget/direction.svg',
+		src: './public/images/icons/widget/direction.svg',
 		value: '2 м/с',
 		bar: {
 			barTitle: 'Северо-западный',

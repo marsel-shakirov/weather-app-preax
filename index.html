@@ -24,7 +24,10 @@
 		<div class="wrap-blur">
 			<header class="header">
 				<a href="/" class="header__logo logo">
-					<img src="./public/images/logo.svg" alt="Логотип сайта WeatherApp" width='192' height='31' class="logo__icon">
+					<picture>
+						<source srcset="./public/images/logo-tablet.svg" media="(max-width: 1023px)">
+						<img src="./public/images/logo.svg" alt="Логотип сайта WeatherApp" class="logo__icon">
+					</picture>
 				</a>
 
 				<form class="search">
@@ -47,95 +50,95 @@
 			<main class="main">
 				<h1 class="visually-hidden">WeatherApp</h1>
 
-				<div class='weather-wrap'>
+				<div class="weather-wrap">
 					<section class="weather-conditions">
 						<div class="detail">
-							<h2 class="detail__location">Москва</h2>
+							<h2 class="detail__location">Кременчуг-константиновское</h2>
 							<time datetime="01-06" class="detail__week">Суббота, 06 января</time>
 							<time datetime="11:29" class="detail__time">11:29</time>
 						</div>
 						<span class="degrees">-7&deg;</span>
 						<div class="forecast">
-							<p class="forecast__title">Облачно</p>
+							<p class="forecast__title">Облачно с прояснениями</p>
 							<p class="forecast__degrees">Ощущается как -11°</p>
 						</div>
 					</section>
 
-					<section class='widget'>
+					<section class="widget">
 						<h2 class="visually-hidden">Виджет погоды</h2>
 						<ul class="widget-lists"></ul>
 					</section>
 				</div>
 
-				<section class="slider slider-mt-72">
+				<section class="slider">
 
 					<div class="menu-wrap">
-						<h2 class='menu__title'>Прогноз:</h2>
+						<h2 class="menu-title">Прогноз:</h2>
 						<menu class="menu">
-							<li class='menu__item'>
-								<button id='hours' type='button' class="menu__button  button-active">на 24 часа</button>
+							<li class="menu__item">
+								<button id="hours" type="button" class="menu__button  button-active">на 24 часа</button>
 							</li>
-							<li class='menu__item'>
-								<button id='day' type='button' class="menu__button">на 5 дней</button>
+							<li class="menu__item">
+								<button id="day" type="button" class="menu__button">на 5 дней</button>
 							</li>
 						</menu>
 					</div>
 
 
 					<div class="switch">
-						<button disabled type='button' class='switch__arrow arrow-left disabled'></button>
+						<button disabled type="button" class="switch__arrow arrow-left disabled"></button>
 						<div class="switch-wrap">
-							<ul class='switch-day__lists'></ul>
-							<ul class='switch-hour__lists visibility-hidden'></ul>
+							<ul class="switch__lists switch-days"></ul>
+							<ul class="switch__lists switch-hours visibility-hidden"></ul>
 						</div>
-						<button type='button' class='switch__arrow arrow-right'></button>
+						<button type="button" class="switch__arrow arrow-right"></button>
 					</div>
 				</section>
 
 			</main>
 			<footer class="footer">
-				<p class='footer-title'>Проект выполнен в
+				<p class="footer__title">Проект выполнен в
 					рамках стажировки
-					<a class='footer-link' href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
+					<a class="footer__link" href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
 				</p>
 			</footer>
 		</div>
 	</div>
 
-	<template id='switch-list'>
-		<li class='switch__item'>
-			<article class='switch-card'>
+	<template id="switch-list">
+		<li class="switch__item">
+			<article class="switch-card">
 				<time datetime="12:00" class="switch-card__time"></time>
-				<div class="switch-card__image">
-					<img src="#" height='32' width='32' alt="">
+				<div class="switch-card__image-block">
+					<img class="switch-card__image-icon" src="#" height="32" width="32" alt="">
 				</div>
-				<span class='switch-card__degrees'></span>
+				<span class="switch-card__degrees"></span>
 			</article>
 		</li>
 	</template>
 
 
-	<template id='widget-list'>
+	<template id="widget-list">
 		<li>
-			<article class='widget-item'>
-				<h3 class='item__title'>Влажность</h3>
-				<div class="item__image">
-					<img src='#' alt="" class="item__icon" width='32' height='32'>
+			<article class="widget-item">
+				<h3 class="widget-item__title">Влажность</h3>
+				<div class="widget-item__image">
+					<img src="#" alt="" class="widget-item__icon" width="32" height="32">
 				</div>
-				<p class='item__scale'></p>
-				<div class='item__progress-bar'>
-					<input class='progress-bar__input' type="range" name="bar" min="0" max="100">
+				<p class="widget-item__scale"></p>
+				<div class="widget-item__bar progress-bar">
+					<input class="progress-bar__input" type="range" name="bar" min="0" max="100">
+					<div class="progress-bar__percent">
+						<p class="percent">0%</p>
+						<p class="percent">100%</p>
+					</div>
+					<p class="progress-bar__title"></p>
 				</div>
-				<div class='item__bar-percent'>
-					<p class='percent'>0%</p>
-					<p class='percent'>100%</p>
-				</div>
-				<p class='item__bar-title'></p>
 			</article>
 		</li>
 	</template>
 
-	<script type='module' src="./scripts/index.js"></script>
+	<script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>

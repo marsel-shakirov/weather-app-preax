@@ -1,11 +1,12 @@
 export const createListsContent = (widgetLists, template, widgetData) => {
-	const widgetTitle = template.content.querySelector('.item__title');
-	const widgetImg = template.content.querySelector('.item__icon');
-	const widgetScale = template.content.querySelector('.item__scale');
-	const widgetBar = template.content.querySelector('.item__progress-bar');
+	const widgetTitle = template.content.querySelector('.widget-item__title');
+	const widgetImg = template.content.querySelector('.widget-item__icon');
+	const widgetScale = template.content.querySelector('.widget-item__scale');
 	const widgetInput = template.content.querySelector('.progress-bar__input');
-	const widgetPercent = template.content.querySelector('.item__bar-percent');
-	const widgetItemBar = template.content.querySelector('.item__bar-title');
+	const widgetPercent = template.content.querySelector(
+		'.progress-bar__percent'
+	);
+	const widgetItemBar = template.content.querySelector('.progress-bar__title');
 
 	widgetData.forEach(({ title, src, value, bar }) => {
 		const { isRadial, barTitle, isProgressBar } = bar;
@@ -15,9 +16,9 @@ export const createListsContent = (widgetLists, template, widgetData) => {
 		widgetItemBar.textContent = barTitle;
 
 		if (isRadial) {
-			widgetInput.classList.add('input__gradient');
+			widgetInput.classList.add('input-gradient');
 		} else {
-			widgetInput.classList.remove('input__gradient');
+			widgetInput.classList.remove('input-gradient');
 		}
 
 		if (barTitle) {
@@ -29,11 +30,11 @@ export const createListsContent = (widgetLists, template, widgetData) => {
 		}
 
 		if (isProgressBar) {
-			widgetBar.style.display = 'block';
+			widgetInput.style.display = 'block';
 			widgetInput.setAttribute('value', `${parseInt(value.slice(0, 2))}`);
 		} else {
-			widgetBar.style.display = 'none';
-			widgetItemBar.classList.add('bar-title_pb_12');
+			widgetInput.style.display = 'none';
+			widgetItemBar.classList.add('bar-title-pb');
 		}
 
 		let li = template.content.cloneNode(true);

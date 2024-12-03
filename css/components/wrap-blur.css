@@ -1,6 +1,12 @@
 .wrap-blur {
-	min-height: 86rem;
+	margin-inline: auto;
 	border-radius: 10px;
 	-webkit-backdrop-filter: blur(17px);
 	backdrop-filter: blur(17px);
+	max-width: 1120px;
+}
+@media (max-width: 320px) {
+	.wrap-blur {
+		width: 290px;
+	}
 }

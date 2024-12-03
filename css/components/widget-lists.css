@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px;
-	width: 50.6em;
+	width: 506px;
 	list-style-type: none;
 }
 
@@ -12,17 +12,18 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.6rem;
-	width: 15.8em;
-	height: 19.6em;
+	width: 158px;
+	height: 196px;
 	border-radius: var(--border-radius);
 	background-color: var(--main-color);
 }
 
-.item__progress-bar {
+.widget-item__bar {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 7px;
+	line-height: 1.3;
 }
 
 .progress-bar__input {
@@ -35,7 +36,7 @@
 	overflow: hidden;
 }
 
-.input__gradient {
+.input-gradient {
 	background: radial-gradient(
 		circle,
 		rgba(84, 84, 84, 0.4),
@@ -63,33 +64,102 @@
 	outline: 2px solid rgba(138, 138, 138, 0.1);
 }
 
-.item__bar-percent {
+.progress-bar {
+	font-size: 1.2rem;
+}
+
+.progress-bar__percent {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	font-size: 1.2rem;
 	color: #393939;
 }
 
-.item__title {
+.widget-item__title {
 	font-size: 1.6rem;
 	font-weight: 700;
 	line-height: 1.25;
 	color: #202020;
 }
 
-.item__bar-title {
+.progress-bar__title {
 	display: none;
-	font-size: 1.2rem;
 	text-align: center;
 	color: #393939;
 }
 
-.bar-title_pb_12 {
-	padding-bottom: 1.2rem;
+.bar-title-pb {
+	padding-bottom: 1.7rem;
 }
 
-.item__scale {
+.widget-item__scale {
 	font-size: 3.2rem;
+	line-height: 1;
 	color: #202020;
+}
+
+@media (max-width: 1023px) {
+	.widget-lists {
+		justify-content: center;
+		gap: 12px;
+	}
+	.widget-item {
+		max-width: 163px;
+	}
+}
+
+@media (max-width: 767px) {
+	.widget-lists {
+		gap: 8px;
+		/* width: 400px; */
+	}
+	.widget-item {
+		padding: 1.2rem;
+		width: 128px;
+		height: 148px;
+	}
+	.widget-item__title {
+		font-size: 1.2rem;
+	}
+	.widget-item__scale {
+		font-size: 22px;
+	}
+	.progress-bar {
+		font-size: 1rem;
+	}
+	.widget-item__icon {
+		width: 24px;
+		height: 24px;
+	}
+	.bar-title-pb {
+		padding-bottom: 1.2rem;
+	}
+	.progress-bar__input {
+		height: 6px;
+	}
+	.progress-bar__input::-webkit-slider-thumb {
+		height: 6px;
+		width: 6px;
+	}
+
+	.progress-bar__input::-moz-range-thumb {
+		height: 6px;
+		width: 6px;
+	}
+}
+
+@media (max-width: 639px) {
+	.widget-item {
+		width: 98px;
+		height: 148px;
+	}
+	.widget-lists {
+		width: 311px;
+	}
+}
+
+@media (max-width: 370px) {
+	.widget-lists {
+		width: 250px;
+	}
 }
