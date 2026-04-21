@@ -7,6 +7,7 @@ export const createSliderContent = (
 	sliderDayData
 ) => {
 	console.log(switchHourLists);
+	console.log(switchDayLists);
 	const span = template.content.querySelector('span');
 	const time = template.content.querySelector('time');
 	const img = template.content.querySelector('img');
