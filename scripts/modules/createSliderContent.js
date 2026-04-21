@@ -6,12 +6,11 @@ export const createSliderContent = (
 	sliderHoursData,
 	sliderDayData
 ) => {
+	const span = template.content.querySelector('span');
 	const time = template.content.querySelector('time');
 	const img = template.content.querySelector('img');
-	const span = template.content.querySelector('span');
 
 	const createCard = (day, imageSrc, degrees, lists) => {
-		time.textContent = day;
 		time.setAttribute('datetime', day);
 		img.src = imageSrc;
 		span.textContent = degrees;
